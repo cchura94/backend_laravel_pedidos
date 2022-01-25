@@ -8,3 +8,25 @@
 > git clone <direccion>
 1.2. inicializar un nuevo repositorio
 > git init
+2. Agregar al (index)
+> git add .
+3. Agregar al (head) commit
+> git commit -m "migrations y models"
+
+4. Registrar el repositorio remoto en el repositorio local
+> git remote add origin https://github.com/cchura94/backend_laravel_pedidos.git 
+
+5. Subir al repositorio remoto
+> git push -u origin master
+------------------------------------
+
+pasos para probar el proyecto de Laravel de Github
+1. clonar o descargar en zip el proyecto de Laravel
+2. copiar el archivo (.env.example) y renombrar a (.env) y agregar config de BD
+3. Instalar las dependencias de Laravel
+   > composer update
+4. generar un key de la app
+   > php artisan key:generate
+5. migrar y crear las tablas de la BD
+   > php artisan migrate
+
