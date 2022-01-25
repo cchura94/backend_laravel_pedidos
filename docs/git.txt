@@ -1,0 +1,10 @@
+1.Instalar GIT
+ - configurar:
+ > git config --global user.name "cristian"
+ > git config --global user.email "cchura.cpc@gmail.com"
+2. Crear una cuenta (Bitbucked, Github, GitLab)
+--------------------------------------------------------
+1.1. clonar el repositorio
+> git clone <direccion>
+1.2. inicializar un nuevo repositorio
+> git init

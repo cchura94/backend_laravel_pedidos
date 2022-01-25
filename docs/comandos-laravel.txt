@@ -1,0 +1,12 @@
+php artisan make:model Categoria
+php artisan make:migration create_categorias_table
+
+php artisan make:model Producto -m
+
+php artisan make:model Cliente -a
+php artisan make:model Pedido -m
+php artisan make:migration create_pedido_producto_table
+
+------------------------------------------
+php artisn make:controller ClienteController --api
+
