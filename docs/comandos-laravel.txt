@@ -9,4 +9,10 @@ php artisan make:migration create_pedido_producto_table
 
 ------------------------------------------
 php artisn make:controller ClienteController --api
+-------------- CONTRLADORES API-------------
+php artisan make:controller Api/CategoriaController --api
+php artisan make:controller Api/ProductoController --api
+php artisan make:controller Api/PedidoController --api
+php artisan make:controller Api/ClienteController --api
+php artisan make:controller Api/UsuarioController --api
 
