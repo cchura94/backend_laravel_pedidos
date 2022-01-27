@@ -1,0 +1,19 @@
+Instalacion JWT
+1. instalar dependencia:
+- require de version 8 de php
+> composer require tymon/jwt-auth:dev-develop --prefer-source 
+-  
+> composer require tymon/jwt-auth "^1.0"
+> composer require tymon/jwt-auth:^1.0@dev       <---- (5.8, 6, 7 de Laravel)
+> composer require tymon/jwt-auth
+-----------------------------------------------------
+
+2. Publicar el archivo de configuracion (config/jwt.php)
+
+> php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+
+3. Generar el key
+
+> php artisan jwt:secret
+
+4. configurar el model

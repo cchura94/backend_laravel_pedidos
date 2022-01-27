@@ -1,0 +1,28 @@
+POST http://127.0.0.1:8000/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "cchura.cpc@gmail.com",
+    "password": "cristian54321"
+}
+
+### perfil
+POST http://127.0.0.1:8000/api/auth/me
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0MzI0ODAzMSwiZXhwIjoxNjQzMjUxNjMxLCJuYmYiOjE2NDMyNDgwMzEsImp0aSI6ImRCdUZwQzZTclU5WkpXSXMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.h8zYEIVIuagtS7FKPPapeXoTsY6bUsOFPRd_sbLHGts
+
+
+### Con sanctum
+GET http://127.0.0.1:8000/api/user
+Accept: application/json
+
+### sanctum
+
+POST http://127.0.0.1:8000/api/tokens/create
+Accept: application/json
+Content-Type: application/json
+
+{
+    "token_name": "prueba"
+}
