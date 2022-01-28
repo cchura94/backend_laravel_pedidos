@@ -24,6 +24,7 @@ use App\Http\Controllers\Api\PedidoController;
 use App\Http\Controllers\Api\ProductoController;
 use App\Http\Controllers\Api\UsuarioController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SanctumAuthController;
 
 /*
  GET   /api/categoria      (index - listar)
@@ -49,6 +50,7 @@ Route::middleware('auth:sanctum')->group(function(){
 
 });
 
+// JWT
 Route::group([
 
     'middleware' => 'api',
@@ -63,9 +65,12 @@ Route::group([
 
 });
 
-// sanctum
-Route::post('/tokens/create', function (Request $request) {
-    $token = $request->user()->createToken($request->token_name);
+// SANCTUM
+Route::post("login", [SanctumAuthController::class, "login"]);
+Route::post("registro", [SanctumAuthController::class, "registro"]);
 
-    return ['token' => $token->plainTextToken];
+Route::middleware('auth:sanctum')->group(function(){
+    Route::get("perfil", [SanctumAuthController::class, "perfil"]);
+    Route::get("refresh", [SanctumAuthController::class, "refresh"]);
+    Route::post("logout", [SanctumAuthController::class, "logout"]);
 });

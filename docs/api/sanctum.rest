@@ -1,0 +1,35 @@
+POST http://127.0.0.1:8000/api/registro
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Oscar",
+    "email": "oscar@mail.com",
+    "password": "oscar54321",
+    "password_confirmation": "oscar54321"
+}
+
+### Login
+POST http://127.0.0.1:8000/api/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "cchura.cpc@gmail.com",
+    "password": "cristian54321"
+}
+
+### Perfil
+GET http://127.0.0.1:8000/api/perfil
+Accept: application/json
+Authorization: Bearer 12|fKYORkGXinWnaEIE4puZoxFl03czLou0ADjEZY9k
+
+### Logout
+POST http://127.0.0.1:8000/api/logout
+Accept: application/json
+Authorization: Bearer 7|XG1Ha9Xb0evyXooSDGMfUJReoflHnAvkKm7zISjS
+
+### Refresh
+GET http://127.0.0.1:8000/api/refresh
+Authorization: Bearer 11|TBDqWLTpcrQYJIvbOj8BJGQcPistiYQpI0SjxY7g
+Accept: application/json

@@ -1,5 +1,6 @@
 GET http://127.0.0.1:8000/api/categoria
 Accept: application/json
+Authorization: Bearer 4|fijkWpNHl6VUuDghuqQfxLmsKTFOYM4ORKxxgveE
 ### Guardar Categoria
 
 POST http://127.0.0.1:8000/api/categoria
