@@ -1,0 +1,4 @@
+http://127.0.0.1:8000/api/producto
+Accept: application/json
+Authorization: Bearer 24|v3lzmVq6HWXEOlqe49oApeDdjQ5aZ25UzCUfT1sS
+
