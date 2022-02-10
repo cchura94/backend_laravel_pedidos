@@ -13,9 +13,13 @@ class ProductoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $productos = Producto::paginate(10);
+        if($request->limit){
+            $productos = Producto::with("categoria")->paginate($request->limit);
+        }else{
+            $productos = Producto::paginate(10);
+        }
         return response()->json($productos, 200);
     }
 
@@ -36,7 +40,8 @@ class ProductoController extends Controller
         $nom_img = "";
         if($file = $request->file("imagen")){
             $nom_img = time(). "-". $file->getClientOriginalName();
-            $file->move("imagenes");
+            $file->move("imagenes", $nom_img);
+            $nom_img = '/imagenes/' . $nom_img;
         }
 
         $prod = new Producto();
@@ -46,7 +51,7 @@ class ProductoController extends Controller
         $prod->descripcion = $request->descripcion;
         $prod->estado = $request->estado;
         $prod->categoria_id = $request->categoria_id;
-        $prod->imagen = '/imagenes' . $nom_img;  
+        $prod->imagen = $nom_img;  
         $prod->save();   
         
         return response()->json(["mensaje" => "Producto registrado"], 201);
