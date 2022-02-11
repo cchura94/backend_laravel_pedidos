@@ -1,0 +1,9 @@
+POST http://127.0.0.1:8000/api/cliente
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 33|tjKSGcQ1YnxrmSg00h7sZjEL06KzpXDW43PcjUVg
+
+{
+    "nombre_completo": "oscar",
+    "ci_nit": "654321"
+}

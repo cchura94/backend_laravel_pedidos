@@ -1,0 +1,27 @@
+POST http://127.0.0.1:8000/api/pedido
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 33|tjKSGcQ1YnxrmSg00h7sZjEL06KzpXDW43PcjUVg
+
+{
+    "cod_factura": "000006",
+    "cliente_id": 2,
+    "productos": [{
+        "producto_id": 2,
+        "cantidad": 2
+    },
+    {
+        "producto_id": 1,
+        "cantidad": 2
+    },
+    {
+        "producto_id": 3,
+        "cantidad": 2
+    }]
+}
+
+### Mostrar un Pedido
+
+GET http://127.0.0.1:8000/api/pedido/6
+Accept: application/json
+Authorization: Bearer 33|tjKSGcQ1YnxrmSg00h7sZjEL06KzpXDW43PcjUVg
