@@ -14,9 +14,14 @@ class ClienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if($request->search != ''){
+            $lista_clientes = Cliente::where('ci_nit', 'like', '%'.$request->search.'%')->get();
+        }else{
+            $lista_clientes = Cliente::all();
+        }
+        return response()->json($lista_clientes, 200);
     }
 
     /**
