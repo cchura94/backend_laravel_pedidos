@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Route::get("/login", function(){
     return [ "mensaje" => "No estas logueado"];
-});
+})->name("login");
