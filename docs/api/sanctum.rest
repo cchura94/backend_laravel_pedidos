@@ -33,3 +33,14 @@ Authorization: Bearer 7|XG1Ha9Xb0evyXooSDGMfUJReoflHnAvkKm7zISjS
 GET http://127.0.0.1:8000/api/refresh
 Authorization: Bearer 11|TBDqWLTpcrQYJIvbOj8BJGQcPistiYQpI0SjxY7g
 Accept: application/json
+
+
+### Peticion al servidor
+POST http://pedidos-laravel.herokuapp.com/api/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "cristian@gmail.com",
+    "password": "cristian54321"
+}
